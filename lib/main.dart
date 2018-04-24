@@ -39,11 +39,18 @@ String myText = "Hello World!";
       padding: const EdgeInsets.all(8.0),
       child: new Center(
         child: new Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new Text(myText),
+            new Text(myText, style: new TextStyle(
+              fontSize: 20.0
+            )),
             new RaisedButton(
-              child: new Text("Click"),
+              child: new Text("Click", style: new TextStyle( 
+                color: Colors.white,
+                fontSize: 15.0
+                )),
               onPressed: _onButtonPress,
+              color: Colors.cyan
             )
           ],
         ),

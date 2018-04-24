@@ -9,7 +9,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: "My App",
-      home: new HomePage()
+      home: new HomePage(),
+      theme: new ThemeData(
+        primarySwatch: Colors.cyan,
+        brightness: Brightness.dark
+      ),
     );
   }
 }
@@ -40,18 +44,13 @@ String myText = "Hello World!";
       child: new Center(
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          
           children: <Widget>[
+            
             new Text(myText, style: new TextStyle(
               fontSize: 20.0
-            )),
-            new RaisedButton(
-              child: new Text("Click", style: new TextStyle( 
-                color: Colors.white,
-                fontSize: 15.0
-                )),
-              onPressed: _onButtonPress,
-              color: Colors.cyan
-            )
+              
+            ))
           ],
         ),
       )
@@ -62,9 +61,15 @@ String myText = "Hello World!";
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("StateFul Demo")
+        title: new Text("StateFul Demo", style: new TextStyle(
+          color: Colors.white
+        ),)
       ),
-      body: _bodyWidget()
+      body: _bodyWidget(),
+      floatingActionButton: new FloatingActionButton(
+        child: new Icon(Icons.add),
+        onPressed: _onButtonPress,
+      ),
     );
   }
 }

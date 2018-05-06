@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import "newhome.dart";
+import 'gesture.dart';
 void main(){
    runApp(new MyApp());
 }
@@ -9,11 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: "My App",
-      home: new HomePage(),
-      theme: new ThemeData(
-        primarySwatch: Colors.cyan,
-        brightness: Brightness.dark
-      ),
+      home: new Gesture()
     );
   }
 }

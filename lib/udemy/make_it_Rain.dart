@@ -13,6 +13,11 @@ class _MakeItRainState extends State<MakeItRain>{
           _moneyCounter = _moneyCounter + 500;
         });
   }
+   _resetMoney(){
+    setState(() {
+          _moneyCounter = 0;
+        });
+  }
   @override
   Widget build(BuildContext context){
     return new Scaffold(
@@ -22,7 +27,7 @@ class _MakeItRainState extends State<MakeItRain>{
       ),
       
         body: new Container(
-          
+          margin: new EdgeInsets.all(20.0),
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -47,7 +52,14 @@ class _MakeItRainState extends State<MakeItRain>{
                 onPressed: _makeRain,
                 child: new Text("Make It Rain!"),
               )
-              ) )
+              ) ),
+
+              new MaterialButton(
+                textColor: Colors.white,
+                color: Colors.redAccent,
+                onPressed: _resetMoney,
+                child: new Text("Rest Money!"),
+              )
               
              
             ],

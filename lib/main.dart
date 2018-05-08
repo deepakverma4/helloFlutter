@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import "newhome.dart";
 import 'gesture.dart';
 import './udemy/make_it_Rain.dart';
+import './udemy/loginPage.dart';
 
 void main(){
    runApp(new MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: "My App",
-      home: new MakeItRain()
+      home: new LoginPage()
     );
   }
 }

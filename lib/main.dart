@@ -4,6 +4,7 @@ import 'gesture.dart';
 import './udemy/make_it_Rain.dart';
 import './udemy/loginPage.dart';
 import './udemy/weightonplanet.dart';
+import './udemy/bmi_app.dart';
 
 void main(){
    runApp(new MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: "My App",
-      home: new WeightX()
+      home: new BmiApp()
     );
   }
 }
